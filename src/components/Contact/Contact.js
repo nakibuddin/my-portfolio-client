@@ -2,6 +2,7 @@ import React from 'react';
 import useTitle from './../../hooks/useTitle';
 import emailjs from '@emailjs/browser';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-hot-toast';
 
 const Contact = () => {
     useTitle('Contact');
@@ -13,10 +14,14 @@ const Contact = () => {
         // emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', event.target, 'YOUR_PUBLIC_KEY')
         emailjs.sendForm('service_x5af9fa', 'template_52nr3wp', event.target, 'gGLUdmrxjvm2YSRQD')
             .then((result) => {
-                navigate('/home');
-                
+                setTimeout(() => { navigate('/home'); }, "2500");
+                event.target.reset();
+                // toast('Message Sent Successfully', {duration: 4000} )';
+                toast.success('Message Sent Successfully');
+
             }, (error) => {
                 console.log(error.text);
+                toast.error(error.text);
             });
 
     }
