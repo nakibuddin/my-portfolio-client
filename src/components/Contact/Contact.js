@@ -7,7 +7,19 @@ const Contact = () => {
     useTitle('Contact');
     const navigate = useNavigate();
 
+    const sendEmail = event => {
+        event.preventDefault();
 
+        // emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', event.target, 'YOUR_PUBLIC_KEY')
+        emailjs.sendForm('service_x5af9fa', 'template_52nr3wp', event.target, 'gGLUdmrxjvm2YSRQD')
+            .then((result) => {
+                navigate('/home');
+                
+            }, (error) => {
+                console.log(error.text);
+            });
+
+    }
 
     return (
         <section className="py-6  bg-gray-800  text-gray-50 md:mx-16 rounded-md">
@@ -37,7 +49,7 @@ const Contact = () => {
                         </p>
                     </div>
                 </div>
-                <form  noValidate="" className="flex flex-col py-6 space-y-6 md:py-0 md:px-6 ng-untouched ng-pristine ng-valid">
+                <form onSubmit={sendEmail} noValidate="" className="flex flex-col py-6 space-y-6 md:py-0 md:px-6 ng-untouched ng-pristine ng-valid">
                     <label className="block">
                         <span className="mb-1">Full name</span>
                         <input type="text" name="name" id="name" placeholder="" className="block w-full border p-3 rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-violet-400  bg-gray-800" required />
