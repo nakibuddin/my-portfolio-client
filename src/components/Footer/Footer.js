@@ -1,11 +1,12 @@
 import React from "react";
 import ScrollToTop from "react-scroll-to-top";
+import './Footer.css';
 // import car from '../../../assets/car.png';
 
 const Footer = () => {
   return (
-    <footer className="px-4 mt-5 divide-y  bg-gray-900  text-gray-100">
-      <ScrollToTop smooth top='600' className="pl-[5px] mb-0"/>
+    <footer className="Footer px-4 divide-y bg-gray-900  text-gray-100">
+      {/* <ScrollToTop smooth top='600' className="pl-[5px] mb-0"/> */}
       
       <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
 
