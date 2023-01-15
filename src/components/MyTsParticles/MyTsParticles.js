@@ -43,8 +43,8 @@ const MyTsParticles = () => {
                                 quantity: 2,
                             },
                             repulse: {
-                                distance: 200,
-                                duration: 0.4,
+                                distance: 100,
+                                duration: 0.8,
                             },
                         },
                     },
@@ -56,7 +56,7 @@ const MyTsParticles = () => {
                             color: "#ffffff",
                             distance: 150,
                             enable: true,
-                            opacity: 0,
+                            opacity: 0.0,
                             width: 1,
                         },
                         collisions: {
@@ -77,7 +77,7 @@ const MyTsParticles = () => {
                                 enable: true,
                                 area: 800,
                             },
-                            value: 40,
+                            value: 60,
                         },
                         opacity: {
                             value: 0.2,

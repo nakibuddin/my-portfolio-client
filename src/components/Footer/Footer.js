@@ -1,8 +1,12 @@
 import React from "react";
+import ScrollToTop from "react-scroll-to-top";
 // import car from '../../../assets/car.png';
+
 const Footer = () => {
   return (
     <footer className="px-4 mt-5 divide-y  bg-gray-900  text-gray-100">
+      <ScrollToTop smooth top='600' className="pl-[5px] mb-0"/>
+      
       <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
 
         <div className="lg:w-1/3">
@@ -12,7 +16,7 @@ const Footer = () => {
             className="flex justify-center space-x-3 lg:justify-start"
           >
             <div className="flex items-center justify-center w-12 h-12 rounded-full  bg-gray-900">
-            <img className='h-14 w-14 ' src='https://media.istockphoto.com/id/1329330337/vector/initial-gold-n-letter-logo-design-n-logo-design-vector-template.jpg?b=1&s=612x612&w=0&k=20&c=Q44I7k3ENMrbPXG5pQMD74ZKiiSR9r7x2JjwPtjhLxQ=' alt="" />
+              <img className='h-14 w-14 ' src='https://media.istockphoto.com/id/1329330337/vector/initial-gold-n-letter-logo-design-n-logo-design-vector-template.jpg?b=1&s=612x612&w=0&k=20&c=Q44I7k3ENMrbPXG5pQMD74ZKiiSR9r7x2JjwPtjhLxQ=' alt="" />
             </div>
             <span className="self-center text-2xl font-semibold">
               Nakib Uddin Ahmad
@@ -92,7 +96,7 @@ const Footer = () => {
 
 
 
-          
+
           <div className="space-y-3">
             <div className="uppercase  text-gray-50">Social media</div>
             <div className="flex justify-start space-x-3">
@@ -144,7 +148,7 @@ const Footer = () => {
           </div>
         </div>
 
-        
+
       </div>
 
       <div className="py-6 text-sm text-center  text-gray-400">
