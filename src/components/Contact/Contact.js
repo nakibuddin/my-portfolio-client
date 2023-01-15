@@ -3,6 +3,7 @@ import useTitle from './../../hooks/useTitle';
 import emailjs from '@emailjs/browser';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
+import MyTsParticles from '../MyTsParticles/MyTsParticles';
 
 const Contact = () => {
     useTitle('Contact');
@@ -28,8 +29,11 @@ const Contact = () => {
 
     return (
         <section className="py-6 mb-5  bg-gray-800  text-gray-50 md:mx-16 rounded-md">
+            
             <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
-                <div className="py-6 md:py-0 md:px-6">
+                <div data-aos="fade-right"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="1500" className="py-6 md:py-0 md:px-6">
                     <h1 className="text-4xl font-bold">Get in touch</h1>
                     <p className="pt-2 pb-4">Fill in the form to start a conversation</p>
                     <div className="space-y-4">
@@ -54,7 +58,9 @@ const Contact = () => {
                         </p>
                     </div>
                 </div>
-                <form onSubmit={sendEmail} noValidate="" className="flex flex-col py-6 space-y-6 md:py-0 md:px-6 ng-untouched ng-pristine ng-valid">
+                <form data-aos="fade-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="1500" onSubmit={sendEmail} noValidate="" className="flex flex-col py-6 space-y-6 md:py-0 md:px-6 ng-untouched ng-pristine ng-valid">
                     <label className="block">
                         <span className="mb-1">Full name</span>
                         <input type="text" name="name" id="name" placeholder="" className="block w-full border p-3 rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-violet-400  bg-gray-800" required />
@@ -70,6 +76,7 @@ const Contact = () => {
                     <button type="submit" className="self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75  bg-violet-400  text-gray-900 focus:ring-violet-400 hover:ring-violet-400">Submit</button>
                 </form>
             </div>
+            <MyTsParticles></MyTsParticles>
         </section>
     );
 };

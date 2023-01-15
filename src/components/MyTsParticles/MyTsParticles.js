@@ -5,12 +5,12 @@ import { loadFull } from "tsparticles";
 
 const MyTsParticles = () => {
     const particlesInit = useCallback(async engine => {
-        console.log(engine);
+        // console.log(engine);
         await loadFull(engine);
     }, []);
 
     const particlesLoaded = useCallback(async container => {
-        await console.log(container);
+        // await console.log(container);
     }, []);
 
     return (
@@ -77,7 +77,7 @@ const MyTsParticles = () => {
                                 enable: true,
                                 area: 800,
                             },
-                            value: 60,
+                            value: 0,
                         },
                         opacity: {
                             value: 0.2,

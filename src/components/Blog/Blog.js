@@ -5,7 +5,9 @@ const Blog = () => {
     useTitle('Blog');
 
     return (
-        <h1 className='font-bold text-center text-5xl lg:mt-20'>Coming soon...</h1>
+        <h1 data-aos="fade-down"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000" className='font-bold text-center text-5xl lg:mt-20'>Coming soon...</h1>
         // <section className=" bg-gray-800  text-gray-100 md:mx-16 rounded-md">
         //     <div className="container flex flex-col justify-center px-4 py-8 mx-auto md:p-8">
         //         {/* <h2 className="text-2xl font-semibold sm:text-4xl">Frequently Asked Questions</h2> */}
